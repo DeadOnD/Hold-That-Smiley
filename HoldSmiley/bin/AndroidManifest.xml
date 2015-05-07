@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="11"
+          android:versionName="1.1"
+          android:installLocation="auto"
+          package="com.thilo.android.holdsmiley">
+    
+    <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="19"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="true" />
+    
+     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+ 
+    <application android:icon="@drawable/icon"
+            android:logo="@drawable/logo"
+            android:label="@string/app_name"
+            android:hardwareAccelerated="true">
+        <activity android:name="com.thilo.android.holdsmiley.SplashActivity"
+                  android:label="@string/activity_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.thilo.android.holdsmiley.LevelActivity"
+                  android:label="@string/activity_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEVELS"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.thilo.android.holdsmiley.GameActivity"
+                  android:screenOrientation="nosensor"
+                  android:label="@string/activity_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.GAME"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.thilo.android.holdsmiley.CreditsActivity"
+                  android:label="@string/activity_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.CREDITS"/>
+            </intent-filter>
+        </activity>
+        
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+    </application>
+</manifest>
